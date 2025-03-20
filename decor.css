@@ -1,0 +1,222 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('assets/fonts/Caitlynnfont.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PixelFont';
+    src: url('assets/fonts/ms-sans-serif-1.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+p {
+    font-size: 1rem;
+}
+
+.wall-text {
+    font-family: 'MyFont', sans-serif;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+logo {
+    position: absolute;
+}
+
+.logo-text {
+    font-family: 'MyFont', sans-serif;
+    font-size: 20px;
+}
+
+
+
+/* Nav */
+.Navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+    z-index: 1000;
+}
+
+ul {
+    display: none;
+    list-style: none;
+}
+
+.Room {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.Room::-webkit-scrollbar {
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+
+.section {
+    flex: none;
+    min-width: fit-content;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-size: 2rem;
+    scroll-snap-align: start;
+}
+
+
+
+
+/* Home */
+.home {
+    background-color: rgb(255, 255, 255);
+    display: 100%;
+    border-left: 2px solid black;
+    padding: 24px;
+}
+
+.door {
+    background-color: rgb(153, 127, 238);
+    margin-right: 25%;
+}
+
+.entrance {
+    background-color: rgb(255, 255, 255);
+    width: fit-content;
+    display: flexbox;
+}
+
+.welcome-message {
+    background-color: #ffffff;
+    width: fit-content;
+    height: min-content;
+    animation: fadeIn 1s ease-in-out;
+    margin-bottom: 16px;
+}
+
+.profilePic {
+    width: 700px;
+}
+
+.contact {
+    /*background-color: lightcoral;*/
+}
+.phone {
+    width: 150px;
+    transform: scaleX(-1);
+    position: absolute;
+    top: 55%;
+    z-index: 10;
+}
+
+.sidetable {
+    position: relative; 
+    display: inline-block;
+    width: 350px;
+    height: auto;
+}
+
+
+
+
+/* prokects */
+.projects {
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+}
+
+.corkboard {
+    transform: rotate(90deg);
+    height: 500px;
+}
+
+
+
+
+/* bookshelf */
+.coding {
+    background-color: rgb(255, 255, 255);
+}
+
+.coding-section {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.bookshlefvector {
+    width:500px;
+}
+
+.computer {
+    width: 500px;
+    transform: scaleX(-1);
+    position: absolute;
+    right: 150px; 
+    bottom: 0;
+    top: 50%;
+    z-index: 10;
+}
+
+.desk {
+    position: relative; 
+    display: inline-block;
+    width: 600px;
+    height: auto;
+}
+
+
+.desk img.desk {
+    width: 900px;
+    left: -250px;
+    bottom: -540px;
+    height: auto;
+    display: block;
+}
+
+
+/* about */
+.about {
+    background-color: lightgreen;
+}
+
+.locker {
+    width: 100px;
+}
+
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
