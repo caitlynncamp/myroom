@@ -1,0 +1,629 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('assets/fonts/Caitlynnfont.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PixelFont';
+    src: url('assets/fonts/ms-sans-serif-1.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    font-size: 1rem;
+}
+
+.wall-text {
+    font-family: 'MyFont', sans-serif;
+    font-size: 1.5rem;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+logo {
+    position: absolute;
+}
+
+.logo-text {
+    font-family: 'MyFont', sans-serif;
+    font-size: 32px;
+}
+
+
+
+
+
+/* Nav */
+.Navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+    z-index: 1000;
+}
+
+.Navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    gap: 24px;
+}
+
+.Navbar ul li {
+    display: inline; 
+}
+
+.Navbar ul li a {
+    text-decoration: none;
+    color: black; 
+    font-weight: bold;
+    font-family: 'MyFont', sans-serif;
+    font-size: 24px;
+}
+
+.Navbar ul li a:hover {
+    color: #c6235c; 
+}
+
+
+
+
+/* Room */
+.Room {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 200vw;
+    height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.Room::-webkit-scrollbar {
+    display: none;
+}
+
+.section {
+    flex: none;
+    min-width: fit-content;
+    width: 90vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    scroll-snap-align: start;
+}
+
+
+
+
+/* Door */
+.bedroomdoor {
+    width: 400px;
+    position: absolute;
+    left: -250px; 
+    bottom: 0;
+    top: 20%;
+    z-index: 1;
+}
+
+
+
+.bed {
+    width: 1000px;
+    position: absolute;
+    left: -750px; 
+    bottom: 0;
+    top: 58%;
+    z-index: 10;
+}
+
+
+
+
+
+/* Home */
+.home {
+    background-color: rgb(255, 255, 255);
+    display: 100%;
+    padding: 24px;
+}
+
+
+
+.entrance {
+    background-color: rgb(255, 255, 255);
+    width: fit-content;
+    display: flexbox;
+    margin-bottom: 700px;
+}
+
+.welcome-message {
+    background-color: #ffffff;
+    width: fit-content;
+    height: min-content;
+    animation: fadeIn 1s ease-in-out;
+    margin-top: 100px;
+    left: 24px;
+}
+
+.profilePic {
+    top: 250px;
+    position: absolute;
+    width: 250px;
+    left: 600px;
+}
+
+.phone {
+    width: 165px;
+    transform: scaleX(-1);
+    position: absolute;
+    left: 360px;
+    top: 67%;
+    z-index: 10;
+    transition: transform 0.1s ease-in-out;
+}
+
+.phone:hover {
+    transform: scaleX(-1) scale(1.05); 
+}
+
+
+.businesscard {
+    width: 150px;
+    position: absolute;
+    left: 475px;
+    top: 73%;
+    z-index: 8;
+}
+
+.businesscard:hover {
+    transform: scale(1.05); 
+}
+
+.sidetable {
+    position: absolute; 
+    display: inline-block;
+    width: 375px;
+    height: auto;
+    left: 300px;
+    top: 70%;
+    z-index:6;
+}
+
+.rug {
+    width: 600px;
+    position: absolute;
+    left: 650px;
+    top:93%;
+    z-index: 1;
+}
+
+.window {
+    position: absolute;
+    width: 375px;
+    top: 150px;
+    left: 900px;
+}
+
+.beanbag {
+    position: absolute;
+    width: 300px;
+    top: 575px;
+    left: 650px;
+    z-index: 3;
+}
+
+.amp {
+    position: absolute;
+    width: 150px;
+    top: 600px;
+    left: 1125px;
+}
+
+.guitar {
+    position: absolute;
+    width: 350px;
+    top: 150px;
+    left: 1300px;
+}
+
+
+
+/* Projects */
+#projects {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 24px;
+    height: 100vh;
+    position: relative;
+}
+
+.corkboard {
+    transform: rotate(90deg);
+    height: 500px;
+}
+
+
+/* Bookshelf */
+.bookshelf-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.bookshlefvector {
+    width: 550px;
+    max-width: 100%;
+    top: 10%;
+    left: 60%;
+    position: absolute;
+}
+
+.greenlightsaber {
+    height: 600px;
+    max-width: 100%;
+    top: 10%;
+    left: 95%;
+    position: absolute;
+}
+
+
+.desk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    position: relative;
+}
+
+.computer {
+    width: 500px;
+    max-width: 100%;
+    transform: scaleX(-1);
+    position: absolute; 
+    top: 48%;
+    z-index: 3;
+    left: 400px;
+}
+
+.computer:hover {
+    transform: scaleX(-1) scale(1.05); 
+}
+
+.desk img.desk {
+    width: 1400px;
+    margin-top: 1125px;
+    height: auto;
+    z-index: 2;
+}
+
+.deskchair {
+    position: absolute;
+    width: 600px;
+    max-width: 100%;
+    top: 60%;
+    bottom: 0%;
+    z-index: 1;
+    left: -75px;
+}
+
+
+/* Research */
+.research {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: fit-content;
+}
+
+.redsticky {
+    width: 100px;
+    position: absolute; 
+    top: 400px;
+    z-index: 4;
+    left: 150px;
+}
+
+.yellowsticky {
+    width: 100px;
+    position: absolute; 
+    top: 100px;
+    z-index: 4;
+    left: 750px;
+}
+
+.whiteboard-container {
+    position: relative;
+    width: 1100px; 
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whiteboard-bg {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#drawingCanvas {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 70%;
+    height: 80%;
+    background: transparent;
+    cursor: crosshair;
+    z-index: 2;
+}
+
+#clearBoard {
+    position: absolute;
+    top: 600px;
+    left: 200px;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background: url('assets/images/') no-repeat center center;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    background-size: contain;
+    width: 100px;
+    height: 40px;
+    border: none;
+    text-indent: -9999px;
+}
+
+#clearBoard img {
+    width: 300px;
+}
+
+/* Research Project */
+.ResearchProjects {
+    position: relative;
+    top: 43%;
+    left: 5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 32px;
+    margin-top: 20px;
+    overflow-x: auto;
+    padding: 8px;
+    z-index: 2;
+}
+
+
+/* GDDS */
+.GDDSProjects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: fit-content; 
+}
+  
+.GDDSimg img {
+    width: 250px;
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+}
+
+.GDDSimg img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/*  
+.GDDStextbox {
+    position: relative;
+    top: -40%;  
+    left: 30%;
+    transform: translateX(-30%);
+    width: fit-content;
+    background-color: rgb(251, 246, 231); 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 8px;
+    z-index: 3;
+}
+  
+.GDDStext {
+    font-family: 'MyFont', sans-serif;
+    text-align: center;
+    border: solid 4px  #333;
+    border-radius: 8px;
+    padding: 4px;
+    margin: 4px;
+    justify-content: center;
+}
+  
+.GDDStext h4 {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 8px;
+    color: #333;
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin: 0 0 8px 0;
+}
+  
+.GDDStextbox h3 {
+    font-size: 8px;
+    color: #333;
+    margin: 0;
+}
+  
+.GDDStextbox p {
+    font-size: 4px;
+    color: #666;
+    margin: 10px 0;
+}
+*/
+
+/* KSU */
+.EthnographyProject {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: fit-content; 
+}
+
+.Ethnoimg img {
+    width: 250px;
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+
+}
+
+.Ethnoimg img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* 
+.Ethnotextbox {
+    position: relative;
+    top: -40%;  
+    left: 25%;
+    transform: translateX(-30%);
+    width: fit-content;
+    background-color: #fbf6e7; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 8px;
+    z-index: 3;
+}
+
+.Ethnotext {
+    font-family: 'MyFont', sans-serif;
+    text-align: center;
+    border: solid 4px  #333;
+    border-radius: 8px;
+    padding: 4px;
+    margin: 4px;
+    justify-content: center;
+}
+  
+.Ethnotext h4 {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 8px;
+    color: #333;
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin: 0 0 8px 0;
+}
+  
+.Ethnotextbox h3 {
+    font-size: 8px;
+    color: #333;
+    margin: 0;
+}
+  
+.Ethnotextbox p {
+    font-size: 4px;
+    color: #666;
+    margin: 10px 0;
+}
+*/
+
+/* about */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    height: 100vh;
+    width: fit-content;
+    position: relative;
+}
+
+.closet {
+    margin-top: 800px;
+    position: relative;
+    width: 1000px;
+}
+
+.note-hotspot {
+    position: absolute;
+    top: 300px;
+    left: 550px;
+    width: 150px;
+    height: 200px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 5;
+}
+
+.note-overlay {
+    position: absolute;
+    top: 10%; /* tweak to match where note should appear */
+    left: 25%;
+    width: 700px;
+    height: auto;
+    display: none;
+    z-index: 10;
+    filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.3));
+  }
+
+
+
+.mirror {
+    top: 500px;
+    position: relative;
+    width: 700px;
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/*Ringing*/
+.ringing {
+    animation: shake 0.3s infinite alternate;
+}
+
+@keyframes shake {
+    0% { transform: rotate(-5deg); }
+    100% { transform: rotate(5deg); }
+}
